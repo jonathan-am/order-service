@@ -1,0 +1,23 @@
+{
+	"id": 1,
+	"payment": {
+		"type": "card",
+		"identifier": "dsjaidjs21321",
+		"status": "paid"
+	},
+	"fraudCheck": true,
+	"status": "initial",
+	"item": {
+		"name": "teste rabbit",
+		"quantity": 10,
+		"unitPrice": 10.32
+	},
+	"value": 104.2,
+	"billing": {
+		"name": "teste",
+		"lastname": "moura",
+		"address": "teste 321 teste"
+	},
+	"createdAt": "2024-09-15T22:07:07.872Z",
+	"updatedAt": "2024-09-15T22:35:19.502Z"
+}
