@@ -8,7 +8,7 @@
 	"fraudCheck": true,
 	"status": "errorMock",
 	"item": {
-		"name": "teste rabbit",
+		"name": "errorMock",
 		"quantity": 10,
 		"unitPrice": "10.32"
 	},

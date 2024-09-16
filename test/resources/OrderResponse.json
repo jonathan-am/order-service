@@ -6,7 +6,7 @@
 		"status": "paid"
 	},
 	"fraudCheck": true,
-	"status": "initial",
+	"status": "created",
 	"item": {
 		"name": "teste rabbit",
 		"quantity": 10,

@@ -4,6 +4,7 @@ import GenericException from '~/middlewares/handler/Exceptions/GenericException'
 import OrderModel from '~/model/order.model';
 
 export const createOrder = async (order) => {
+    order.status = "created";
     return await OrderModel.create(order).then((result)=> {
         logger.info(`Succeso ao criar a ordem, result: ${result}`)
         return result;

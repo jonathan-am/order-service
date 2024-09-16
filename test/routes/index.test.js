@@ -10,7 +10,7 @@ beforeAll(()=> {
         default: {
             create: vi.fn((order)=>new Promise((resolve, reject)=>{
                 console.log(order)
-                if(order.status==="errorMock"){
+                if(order.item.name==="errorMock"){
                     return reject("Erro ao criar a ordem")
                 }
                 resolve(orderResponse.default)
