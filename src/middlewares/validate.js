@@ -1,6 +1,7 @@
 import Joi from 'joi';
 import _ from 'lodash';
 import BadRequest from './handler/Exceptions/BadRequest';
+import httpStatus from 'http-status';
 
 const validate = (schema) => (req, res, next) => {
 	const validSchema = _.pick(schema, ['params', 'query', 'body', 'headers']);
@@ -9,7 +10,7 @@ const validate = (schema) => (req, res, next) => {
 		.prefs({ errors: { label: 'path', wrap: { label: false } }, abortEarly: false })
 		.validate(object);
 	if (error) {
-		return next(new BadRequest(400, null, error.details.flatMap(x=>[x.message, ])));
+		return next(new BadRequest(httpStatus.BAD_REQUEST, null, error.details.flatMap(x=>[x.message,])));
 	}
 	Object.assign(req, value);
 	return next();
